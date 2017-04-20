@@ -10,15 +10,17 @@ public class EmpresaVenta {
     private String nombreEmpresa;
     private String direccion;
     private String descripcion;
+    private int logo;
 
     public EmpresaVenta() {
     }
 
-    public EmpresaVenta(String categoria, String nombreEmpresa, String direccion, String descripcion) {
+    public EmpresaVenta(String categoria, String nombreEmpresa, String direccion, String descripcion, int logo) {
         this.categoria = categoria;
         this.nombreEmpresa = nombreEmpresa;
         this.direccion = direccion;
         this.descripcion = descripcion;
+        this.logo = logo;
     }
 
     public String getCategoria() {
@@ -51,5 +53,13 @@ public class EmpresaVenta {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public int getLogo() {
+        return logo;
+    }
+
+    public void setLogo(int logo) {
+        this.logo = logo;
     }
 }

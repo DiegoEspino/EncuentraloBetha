@@ -154,16 +154,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void lanzarDetallecategoria(String tituloCategoria){
-
-        Fragment fragment = new DetalleCategoriaFragment();
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.content_main, fragment)
-                .commit();
-        getSupportActionBar().setTitle(tituloCategoria);
-    }
-
     public void inicializar(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         ofertas = (Button)findViewById(R.id.ofertas);

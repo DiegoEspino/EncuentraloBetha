@@ -1,6 +1,7 @@
 package proyects.carosdrean.xyz.encuentralobetha.Adaptador;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import proyects.carosdrean.xyz.encuentralobetha.DetalleCategoria;
 import proyects.carosdrean.xyz.encuentralobetha.MainActivity;
 import proyects.carosdrean.xyz.encuentralobetha.R;
 import proyects.carosdrean.xyz.encuentralobetha.pojo.Categoria;
@@ -23,7 +25,6 @@ public class AdaptadorCategoria extends RecyclerView.Adapter<AdaptadorCategoria.
 
     ArrayList<Categoria> categorias;
     Activity activity;
-    MainActivity mainActivity;
 
     public AdaptadorCategoria(ArrayList<Categoria> categorias, Activity activity) {
         this.categorias = categorias;
@@ -50,7 +51,10 @@ public class AdaptadorCategoria extends RecyclerView.Adapter<AdaptadorCategoria.
         categoriaViewHolder.categoria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(activity, "ver " + categoria.getCategoria(), Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(activity, DetalleCategoria.class);
+                i.putExtra("categoria", categoria.getCategoria());
+                activity.startActivity(i);
+
             }
         });
     }
