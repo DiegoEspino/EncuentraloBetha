@@ -23,6 +23,8 @@ public class DetalleCategoria extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbarDetealleCategoria);
         setSupportActionBar(toolbar);
+        //String titulo = getIntent().getBundleExtra("categoria");
+        //toolbar.setTitle();
 
         listaDetalle = (RecyclerView)findViewById(R.id.lista_detale_categoria);
         LinearLayoutManager llm = new LinearLayoutManager(this);
