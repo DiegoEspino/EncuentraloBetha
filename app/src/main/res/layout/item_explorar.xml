@@ -9,52 +9,102 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/titulo_item_explorar"
+        android:id="@+id/categoria"
         android:textSize="20dp"
         android:textColor="#fff"
         android:background="#237787"
         android:textStyle="bold"
-        android:elevation="10dp"
-        android:padding="18dp"/>
+        android:padding="10dp"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_height="wrap_content"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:text="Clinica Buena"
-            android:layout_weight="1"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:background="#3bbf23"
-            android:paddingTop="30dp"
-            android:paddingBottom="30dp"/>
-
-        <TextView
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:text="Dental Carlos"
-            android:layout_weight="1"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:background="#3518b7"
-            android:paddingTop="30dp"
-            android:paddingBottom="30dp"/>
+            android:orientation="horizontal"
+            android:minHeight="75dp"
+            android:maxHeight="75dp"
+            android:weightSum="3">
 
-        <TextView
+            <ImageView
+                android:layout_height="78dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/iv_p"
+                android:src="@drawable/fondo"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:layout_height="78dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/fondo"
+                android:id="@+id/iv_s"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:layout_height="78dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/fondo"
+                android:id="@+id/iv_t"
+                android:scaleType="centerCrop"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:text="Optica fabian"
-            android:layout_weight="1"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:background="#e64910"
-            android:paddingTop="30dp"
-            android:paddingBottom="30dp"/>
+            android:orientation="horizontal"
+            android:weightSum="3">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_nombre_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="30dp"
+                android:paddingTop="30dp"
+                android:textColor="@color/blanco"
+                android:text="Clinica Buena"
+                android:elevation="7dp"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_nombre_s"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Dental Carlos"
+                android:layout_weight="1"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:elevation="7dp"
+                android:textColor="@color/blanco"/>
+
+            <TextView
+                android:id="@+id/tv_nombre_t"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Optica fabian"
+                android:layout_weight="1"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:paddingTop="30dp"
+                android:elevation="7dp"
+                android:paddingBottom="30dp"
+                android:textColor="@color/blanco"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>

@@ -2,11 +2,7 @@ package proyects.carosdrean.xyz.encuentralobetha;
 
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.widget.SearchView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,9 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 
 import proyects.carosdrean.xyz.encuentralobetha.Fragments.ExplorarFragment;
 import proyects.carosdrean.xyz.encuentralobetha.Fragments.MapFragment;
@@ -33,7 +27,6 @@ public class MainActivity extends AppCompatActivity
     private AppBarLayout contToolDemas;
     private DrawerLayout drawer;
     private boolean demas = false;
-    private Toolbar menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,6 +152,16 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void lanzarDetallecategoria(String tituloCategoria){
+
+        Fragment fragment = new DetalleCategoriaFragment();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.content_main, fragment)
+                .commit();
+        getSupportActionBar().setTitle(tituloCategoria);
     }
 
     public void inicializar(){
